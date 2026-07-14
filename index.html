@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mariscos German | San Felipe-Style Mexican Seafood Truck in San Diego</title>
+<meta name="description" content="Mariscos German is a family-run Mexican seafood truck (mariscos lonchera) in Lincoln Park / Southeast San Diego, serving fish tacos, ceviche, aguachiles, oysters and more since 2000.">
+<meta name="theme-color" content="#0a3d3f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,500&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* Baja coast palette — deep ocean teal, sun-bleached sand, chile coral, lime accent */
+    --teal-950:#062023;
+    --teal-900:#0a3d3f;
+    --teal-800:#0e5153;
+    --teal-700:#136b6a;
+    --teal-500:#1f8f88;
+    --teal-300:#6cc9bd;
+    --teal-100:#e2f5f0;
+
+    --coral-700:#c23e28;
+    --coral-600:#e0563a;
+    --coral-500:#ec6a4c;
+    --coral-100:#fce4dc;
+
+    --lime-500:#9cc93a;
+    --lime-300:#c4e174;
+    --lime-100:#eef7d9;
+
+    --sand-50:#fbf6ea;
+    --sand-100:#f6ecd6;
+    --sand-200:#efdfba;
+
+    --ink:#0e2a2a;
+    --ink-soft:#3c5a58;
+    --white:#ffffff;
+
+    --font-display:'Fraunces', Georgia, serif;
+    --font-body:'Figtree', system-ui, -apple-system, sans-serif;
+
+    --radius-xl:32px;
+    --radius-lg:24px;
+    --radius-md:16px;
+    --radius-sm:10px;
+
+    --shadow-soft:0 24px 50px -22px rgba(6,32,35,0.4);
+    --shadow-tight:0 10px 24px -10px rgba(6,32,35,0.32);
+    --shadow-lift:0 30px 60px -20px rgba(6,32,35,0.5);
+
+    --ease:cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+  }
+
+  body{
+    margin:0;
+    font-family:var(--font-body);
+    color:var(--ink);
+    background:var(--sand-50);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  h1,h2,h3,h4{
+    font-family:var(--font-display);
+    line-height:1.1;
+    margin:0 0 0.5em;
+    color:var(--teal-950);
+    font-weight:700;
+    letter-spacing:-0.01em;
+  }
+
+  p{ margin:0 0 1em; }
+  a{ color:inherit; }
+  img,svg{ display:block; max-width:100%; }
+  ul{ margin:0; padding:0; }
+
+  .container{
+    width:100%;
+    max-width:1180px;
+    margin-inline:auto;
+    padding-inline:24px;
+  }
+
+  /* Focus visibility */
+  a:focus-visible,
+  button:focus-visible,
+  [tabindex]:focus-visible{
+    outline:3px solid var(--coral-600);
+    outline-offset:3px;
+    border-radius:6px;
+  }
+
+  .visually-hidden{
+    position:absolute;
+    width:1px;height:1px;
+    padding:0;margin:-1px;
+    overflow:hidden;
+    clip:rect(0,0,0,0);
+    white-space:nowrap;
+    border:0;
+  }
+
+  .skip-link{
+    position:absolute;
+    top:-60px;
+    left:16px;
+    background:var(--teal-950);
+    color:var(--white);
+    padding:12px 20px;
+    border-radius:0 0 10px 10px;
+    z-index:1000;
+    transition:top 0.2s var(--ease);
+    font-weight:600;
+    text-decoration:none;
+  }
+  .skip-link:focus{ top:0; }
+
+  /* ---------- Header ---------- */
+  .site-header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(251,246,234,0.88);
+    backdrop-filter:blur(14px) saturate(1.4);
+    -webkit-backdrop-filter:blur(14px) saturate(1.4);
+    border-bottom:1px solid rgba(14,42,42,0.08);
+    transition:box-shadow 0.3s var(--ease);
+  }
+  .site-header.is-scrolled{
+    box-shadow:0 8px 24px -12px rgba(6,32,35,0.18);
+  }
+
+  .header-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    padding-block:14px;
+  }
+
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    color:var(--teal-950);
+  }
+
+  .brand-mark{ width:46px; height:46px; flex:none; }
+
+  .brand-text{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:1.32rem;
+    letter-spacing:-0.01em;
+    color:var(--teal-950);
+  }
+  .brand-text span{
+    display:block;
+    font-family:var(--font-body);
+    font-weight:700;
+    font-size:0.62rem;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--coral-700);
+    margin-top:2px;
+  }
+
+  .main-nav ul{
+    display:flex;
+    gap:2px;
+    list-style:none;
+  }
+
+  .main-nav a{
+    display:inline-block;
+    padding:10px 16px;
+    text-decoration:none;
+    font-weight:600;
+    font-size:0.94rem;
+    color:var(--teal-900);
+    border-radius:999px;
+    position:relative;
+    transition:color 0.2s var(--ease);
+  }
+  .main-nav a::after{
+    content:"";
+    position:absolute;
+    left:16px; right:16px; bottom:6px;
+    height:2px;
+    background:var(--coral-600);
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:transform 0.25s var(--ease);
+  }
+  .main-nav a:hover{ color:var(--coral-700); }
+  .main-nav a:hover::after{ transform:scaleX(1); }
+
+  .nav-cta{ display:none; }
+  .nav-cta a{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--coral-700);
+    color:var(--white);
+    padding:11px 20px;
+    border-radius:999px;
+    font-weight:700;
+    font-size:0.92rem;
+    text-decoration:none;
+    box-shadow:var(--shadow-tight);
+    transition:transform 0.2s var(--ease), background-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
+    white-space:nowrap;
+  }
+  .nav-cta a:hover{
+    background:#a8341f;
+    transform:translateY(-2px);
+    box-shadow:var(--shadow-soft);
+  }
+  .nav-cta a:active{ transform:translateY(0); }
+
+  @media (min-width:760px){ .nav-cta{ display:block; } }
+
+  .menu-toggle{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:46px;
+    height:46px;
+    border-radius:14px;
+    border:2px solid var(--teal-700);
+    background:var(--white);
+    cursor:pointer;
+    transition:background-color 0.2s var(--ease), transform 0.15s var(--ease);
+  }
+  .menu-toggle:hover{ background:var(--teal-100); }
+  .menu-toggle:active{ transform:scale(0.94); }
+  .menu-toggle svg{ width:22px; height:22px; color:var(--teal-900); }
+
+  @media (min-width:760px){ .menu-toggle{ display:none; } }
+
+  .main-nav{ display:none; }
+  .main-nav.is-open{
+    display:block;
+    position:absolute;
+    left:0;
+    right:0;
+    top:100%;
+    background:var(--sand-50);
+    border-bottom:1px solid rgba(14,42,42,0.1);
+    box-shadow:var(--shadow-soft);
+  }
+  .main-nav.is-open ul{
+    flex-direction:column;
+    padding:12px 24px 20px;
+    gap:2px;
+  }
+  .main-nav.is-open a{ display:block; }
+  .main-nav.is-open a::after{ display:none; }
+
+  @media (min-width:760px){
+    .main-nav{
+      display:block;
+      position:static;
+      background:none;
+      border:none;
+      box-shadow:none;
+    }
+    .main-nav ul{ flex-direction:row; padding:0; }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    overflow:hidden;
+    background:
+      linear-gradient(180deg, rgba(6,32,35,0.55) 0%, rgba(6,32,35,0.72) 55%, rgba(6,32,35,0.94) 100%),
+      linear-gradient(115deg, rgba(6,32,35,0.55) 0%, rgba(10,61,63,0.35) 40%, rgba(200,70,47,0.28) 100%),
+      url('photos/photo1.jpg');
+    background-size:cover;
+    background-position:center 62%;
+    color:var(--white);
+    padding-block:120px 128px;
+  }
+
+  .hero-inner{
+    position:relative;
+    z-index:2;
+    max-width:760px;
+  }
+
+  .hero-eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:rgba(255,255,255,0.12);
+    border:1px solid rgba(255,255,255,0.32);
+    padding:9px 18px 9px 14px;
+    border-radius:999px;
+    font-size:0.8rem;
+    font-weight:700;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    margin-bottom:28px;
+    backdrop-filter:blur(6px);
+  }
+  .hero-eyebrow svg{ width:16px; height:16px; color:var(--lime-300); flex:none; }
+
+  .hero h1{
+    color:var(--white);
+    font-size:clamp(2.8rem, 5.6vw + 1rem, 5.4rem);
+    font-weight:800;
+    font-style:normal;
+    margin-bottom:0.28em;
+    letter-spacing:-0.02em;
+  }
+
+  .hero-tagline{
+    font-size:clamp(1.1rem, 1vw + 0.9rem, 1.35rem);
+    font-weight:500;
+    color:var(--sand-100);
+    max-width:38ch;
+    margin-bottom:2em;
+    line-height:1.55;
+  }
+
+  .hero-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+    margin-bottom:44px;
+  }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:17px 30px;
+    border-radius:999px;
+    font-weight:700;
+    font-size:1.02rem;
+    text-decoration:none;
+    transition:transform 0.22s var(--ease), box-shadow 0.22s var(--ease), background-color 0.22s var(--ease);
+    border:2px solid transparent;
+  }
+  .btn svg{ width:20px; height:20px; flex:none; }
+
+  .btn-primary{
+    background:var(--coral-700);
+    color:var(--white);
+    box-shadow:0 16px 34px -12px rgba(194,62,40,0.65);
+  }
+  .btn-primary:hover{
+    transform:translateY(-3px);
+    background:#a8341f;
+    box-shadow:0 20px 40px -12px rgba(194,62,40,0.75);
+  }
+  .btn-primary:active{ transform:translateY(-1px); }
+
+  .btn-secondary{
+    background:rgba(255,255,255,0.06);
+    color:var(--white);
+    border-color:rgba(255,255,255,0.55);
+    backdrop-filter:blur(6px);
+  }
+  .btn-secondary:hover{
+    background:rgba(255,255,255,0.18);
+    border-color:rgba(255,255,255,0.8);
+    transform:translateY(-3px);
+  }
+  .btn-secondary:active{ transform:translateY(-1px); }
+
+  @media (prefers-reduced-motion: reduce){
+    .btn:hover, .nav-cta a:hover{ transform:none; }
+  }
+
+  .hero-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:28px;
+    font-size:0.95rem;
+    font-weight:500;
+    color:var(--sand-100);
+  }
+  .hero-meta li{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    list-style:none;
+  }
+  .hero-meta svg{ width:18px; height:18px; flex:none; color:var(--lime-300); }
+
+  /* ---------- Section shared ---------- */
+  section{ padding-block:clamp(72px, 6vw + 40px, 116px); }
+  .section-head{
+    max-width:660px;
+    margin-bottom:56px;
+  }
+  .section-head.center{
+    margin-inline:auto;
+    text-align:center;
+  }
+  .eyebrow{
+    display:inline-block;
+    font-weight:700;
+    font-size:0.8rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--coral-700);
+    margin-bottom:14px;
+  }
+  .section-head h2{
+    font-size:clamp(2rem, 1.2vw + 1.7rem, 2.9rem);
+  }
+  .section-lede{
+    font-size:1.12rem;
+    color:var(--ink-soft);
+    margin-bottom:0;
+  }
+
+  /* ---------- About ---------- */
+  .about{ background:var(--white); position:relative; }
+  .about-grid{
+    display:grid;
+    gap:56px;
+    align-items:center;
+  }
+  @media (min-width:900px){
+    .about-grid{ grid-template-columns: 1.05fr 0.95fr; gap:72px; }
+  }
+
+  .about-copy p{
+    font-size:1.08rem;
+    color:var(--ink-soft);
+  }
+
+  .about-badges{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:30px;
+  }
+  .badge{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    background:var(--teal-100);
+    color:var(--teal-900);
+    font-weight:700;
+    font-size:0.88rem;
+    padding:11px 18px;
+    border-radius:999px;
+    transition:background-color 0.2s var(--ease), transform 0.2s var(--ease);
+  }
+  .badge:hover{ background:var(--lime-100); transform:translateY(-2px); }
+  .badge svg{ width:16px; height:16px; flex:none; color:var(--coral-600); }
+
+  .about-art{
+    position:relative;
+    border-radius:var(--radius-xl);
+    overflow:hidden;
+    aspect-ratio:4/4.6;
+    box-shadow:var(--shadow-lift);
+    transform:rotate(-1.2deg);
+    transition:transform 0.4s var(--ease);
+  }
+  .about-art:hover{ transform:rotate(0deg) scale(1.01); }
+  @media (prefers-reduced-motion: reduce){
+    .about-art:hover{ transform:rotate(-1.2deg); }
+  }
+  .about-art img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+  .about-art-tag{
+    position:absolute;
+    left:20px;
+    bottom:20px;
+    background:rgba(6,32,35,0.82);
+    backdrop-filter:blur(6px);
+    color:var(--white);
+    font-size:0.85rem;
+    font-weight:600;
+    padding:10px 16px;
+    border-radius:999px;
+  }
+  .about-art-badge{
+    position:absolute;
+    top:-18px;
+    right:-18px;
+    width:110px;
+    height:110px;
+    background:var(--coral-600);
+    color:var(--white);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:0.95rem;
+    line-height:1.2;
+    box-shadow:var(--shadow-soft);
+    transform:rotate(8deg);
+    padding:8px;
+  }
+
+  /* ---------- Services ---------- */
+  .services{ background:var(--sand-100); }
+
+  .services-grid{
+    display:grid;
+    gap:24px;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+  }
+
+  .service-card{
+    background:var(--white);
+    border-radius:var(--radius-lg);
+    padding:32px 26px;
+    box-shadow:var(--shadow-tight);
+    border:1px solid rgba(14,42,42,0.06);
+    transition:transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+    position:relative;
+    overflow:hidden;
+  }
+  .service-card::before{
+    content:"";
+    position:absolute;
+    top:-44px; right:-44px;
+    width:120px; height:120px;
+    border-radius:50%;
+    background:var(--lime-100);
+    z-index:0;
+    transition:transform 0.35s var(--ease);
+  }
+  .service-card:hover{
+    transform:translateY(-8px);
+    box-shadow:var(--shadow-lift);
+  }
+  .service-card:hover::before{ transform:scale(1.25); }
+  @media (prefers-reduced-motion: reduce){
+    .service-card:hover{ transform:none; }
+    .service-card:hover::before{ transform:none; }
+  }
+
+  .service-icon{
+    position:relative;
+    z-index:1;
+    width:58px; height:58px;
+    border-radius:16px;
+    background:var(--teal-800);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:20px;
+  }
+  .service-icon svg{ width:30px; height:30px; color:var(--white); }
+
+  .service-card h3{
+    position:relative;
+    z-index:1;
+    font-size:1.18rem;
+    margin-bottom:8px;
+  }
+  .service-card p{
+    position:relative;
+    z-index:1;
+    color:var(--ink-soft);
+    font-size:0.97rem;
+    margin-bottom:0;
+  }
+
+  /* ---------- Full Menu ---------- */
+  .menu-section{ background:var(--white); }
+  .menu-photo-grid{
+    display:grid;
+    gap:24px;
+    margin-bottom:56px;
+  }
+  .menu-photo-card{
+    display:block;
+    border-radius:var(--radius-xl);
+    overflow:hidden;
+    box-shadow:var(--shadow-soft);
+    border:1px solid rgba(14,42,42,0.1);
+    max-width:520px;
+    margin-inline:auto;
+    text-decoration:none;
+    position:relative;
+    transition:transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+  }
+  .menu-photo-card:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--shadow-lift);
+  }
+  @media (prefers-reduced-motion: reduce){ .menu-photo-card:hover{ transform:none; } }
+  .menu-photo-card img{ width:100%; height:auto; }
+  .menu-photo-card .menu-zoom-hint{
+    position:absolute;
+    right:14px;
+    bottom:14px;
+    background:rgba(6,32,35,0.85);
+    color:var(--white);
+    font-size:0.78rem;
+    font-weight:700;
+    padding:7px 14px;
+    border-radius:999px;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+  }
+  .menu-photo-card .menu-zoom-hint svg{ width:14px; height:14px; }
+  .menu-note{
+    max-width:640px;
+    margin:0 auto 48px;
+    text-align:center;
+    color:var(--ink-soft);
+    font-size:0.95rem;
+    font-style:italic;
+  }
+  .menu-text-grid{
+    display:grid;
+    gap:28px;
+    grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+  }
+  .menu-category{
+    background:var(--sand-50);
+    border:1px solid rgba(14,42,42,0.08);
+    border-radius:var(--radius-md);
+    padding:26px;
+    transition:border-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
+  }
+  .menu-category:hover{
+    border-color:var(--teal-300);
+    box-shadow:var(--shadow-tight);
+  }
+  .menu-category h3{
+    font-size:1.12rem;
+    color:var(--teal-900);
+    margin-bottom:16px;
+    padding-bottom:12px;
+    border-bottom:2px solid var(--lime-500);
+  }
+  .menu-items{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+  }
+  .menu-items li{
+    color:var(--ink-soft);
+    font-size:0.98rem;
+  }
+
+  /* ---------- Highlights strip ---------- */
+  .highlights{
+    background:
+      radial-gradient(circle at 15% 20%, rgba(255,255,255,0.10), transparent 45%),
+      linear-gradient(120deg, var(--teal-900), var(--coral-700));
+    color:var(--white);
+    padding-block:64px;
+    position:relative;
+    overflow:hidden;
+  }
+  .highlights-grid{
+    display:grid;
+    gap:36px;
+    grid-template-columns:repeat(auto-fit, minmax(210px, 1fr));
+    text-align:center;
+    position:relative;
+    z-index:1;
+  }
+  .highlight-item{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+  }
+  .highlight-item svg{ width:36px; height:36px; color:var(--lime-300); }
+  .highlight-value{
+    font-family:var(--font-display);
+    font-size:1.8rem;
+    font-weight:700;
+  }
+  .highlight-label{
+    font-size:0.93rem;
+    color:var(--white);
+    opacity:0.92;
+    max-width:22ch;
+  }
+
+  /* ---------- Gallery ---------- */
+  .gallery{ background:var(--sand-100); }
+  .gallery-grid{
+    display:grid;
+    gap:20px;
+    grid-template-columns:repeat(2, 1fr);
+  }
+  @media (min-width:640px){
+    .gallery-grid{ grid-template-columns:repeat(3, 1fr); }
+  }
+  .gallery-item{
+    position:relative;
+    border-radius:var(--radius-md);
+    overflow:hidden;
+    aspect-ratio:1/1;
+    box-shadow:var(--shadow-tight);
+    transition:box-shadow 0.3s var(--ease);
+  }
+  .gallery-item:hover{ box-shadow:var(--shadow-lift); }
+  .gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform 0.45s var(--ease);
+  }
+  .gallery-item:hover img{ transform:scale(1.07); }
+  @media (prefers-reduced-motion: reduce){
+    .gallery-item:hover img{ transform:none; }
+  }
+  .gallery-caption{
+    position:absolute;
+    inset:auto 0 0 0;
+    padding:14px 16px 14px;
+    background:linear-gradient(0deg, rgba(6,32,35,0.9), transparent);
+    color:var(--white);
+    font-size:0.85rem;
+    font-weight:700;
+  }
+  .gallery-item:first-child{
+    grid-column: span 2;
+    grid-row: span 2;
+    aspect-ratio:auto;
+  }
+  @media (max-width:639px){
+    .gallery-item:first-child{ grid-column: span 2; grid-row:auto; aspect-ratio:4/3; }
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq{ background:var(--white); }
+  .faq-list{
+    max-width:780px;
+    margin-inline:auto;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+  .faq-item{
+    background:var(--sand-50);
+    border:1px solid rgba(14,42,42,0.08);
+    border-radius:var(--radius-md);
+    overflow:hidden;
+    transition:border-color 0.2s var(--ease);
+  }
+  .faq-item:has(details[open]){ border-color:var(--teal-300); }
+  .faq-item summary{
+    list-style:none;
+    cursor:pointer;
+    padding:22px 26px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    font-weight:700;
+    font-size:1.04rem;
+    color:var(--teal-950);
+    -webkit-tap-highlight-color:transparent;
+  }
+  .faq-item summary::-webkit-details-marker{ display:none; }
+  .faq-item summary:hover{ color:var(--coral-700); }
+  .faq-icon{
+    flex:none;
+    width:32px; height:32px;
+    border-radius:50%;
+    background:var(--teal-100);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:transform 0.3s var(--ease), background-color 0.3s var(--ease);
+  }
+  .faq-icon svg{ width:16px; height:16px; color:var(--teal-800); }
+  details[open] .faq-icon{ transform:rotate(45deg); background:var(--coral-100); }
+  details[open] .faq-icon svg{ color:var(--coral-700); }
+  .faq-answer{
+    padding:0 26px 24px;
+    color:var(--ink-soft);
+    font-size:0.99rem;
+    max-width:64ch;
+  }
+  .faq-answer p{ margin:0; }
+  @media (prefers-reduced-motion: reduce){
+    .faq-icon{ transition:none; }
+  }
+
+  /* ---------- Visit ---------- */
+  .visit{
+    background:var(--teal-950);
+    color:var(--white);
+    position:relative;
+    overflow:hidden;
+  }
+  .visit::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:radial-gradient(circle at 80% 10%, rgba(108,201,189,0.22), transparent 55%);
+    pointer-events:none;
+  }
+  .visit .section-head h2{ color:var(--white); }
+  .visit .section-lede{ color:var(--teal-100); }
+
+  .visit-grid{
+    position:relative;
+    z-index:1;
+    display:grid;
+    gap:32px;
+  }
+  @media (min-width:860px){
+    .visit-grid{ grid-template-columns:1fr 1fr; }
+  }
+
+  .visit-card{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.14);
+    border-radius:var(--radius-lg);
+    padding:34px;
+    backdrop-filter:blur(4px);
+  }
+
+  .visit-list{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+  }
+  .visit-list li{
+    display:flex;
+    gap:16px;
+    align-items:flex-start;
+  }
+  .visit-list svg{
+    width:24px; height:24px;
+    flex:none;
+    color:var(--lime-300);
+    margin-top:2px;
+  }
+  .visit-list a{
+    color:var(--white);
+    text-decoration:underline;
+    text-decoration-color:rgba(255,255,255,0.4);
+    text-underline-offset:3px;
+    transition:text-decoration-color 0.2s var(--ease);
+  }
+  .visit-list a:hover{ text-decoration-color:var(--lime-300); }
+  .visit-list h3{
+    color:var(--white);
+    font-size:1.05rem;
+    margin-bottom:4px;
+  }
+  .visit-list p{
+    margin:0;
+    color:var(--teal-100);
+    font-size:0.96rem;
+  }
+
+  .hours-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:8px;
+  }
+  .hours-table caption{
+    text-align:left;
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:1.1rem;
+    margin-bottom:14px;
+    color:var(--white);
+  }
+  .hours-table th,
+  .hours-table td{
+    text-align:left;
+    padding:11px 6px;
+    border-bottom:1px solid rgba(255,255,255,0.12);
+    font-size:0.95rem;
+  }
+  .hours-table th{
+    font-weight:600;
+    color:var(--teal-100);
+  }
+  .hours-table td{ color:var(--white); font-weight:600; }
+
+  .map-btn{
+    margin-top:26px;
+    width:100%;
+    justify-content:center;
+  }
+
+  /* ---------- Footer ---------- */
+  .site-footer{
+    background:var(--teal-900);
+    color:var(--teal-100);
+    padding-block:44px;
+  }
+  .footer-inner{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+  }
+  .footer-brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:1.15rem;
+    color:var(--white);
+  }
+  .footer-brand svg{ width:34px; height:34px; }
+
+  .footer-links{
+    display:flex;
+    gap:22px;
+    list-style:none;
+    flex-wrap:wrap;
+  }
+  .footer-links a{
+    text-decoration:none;
+    color:var(--teal-100);
+    font-weight:600;
+    font-size:0.92rem;
+    transition:color 0.2s var(--ease);
+  }
+  .footer-links a:hover{ color:var(--lime-300); }
+
+  .footer-note{
+    width:100%;
+    margin-top:26px;
+    padding-top:22px;
+    border-top:1px solid rgba(255,255,255,0.12);
+    font-size:0.82rem;
+    color:rgba(226,245,240,0.65);
+  }
+
+  /* Reduced motion global override */
+  @media (prefers-reduced-motion: reduce){
+    *{
+      animation-duration:0.001ms !important;
+      animation-iteration-count:1 !important;
+      transition-duration:0.001ms !important;
+      scroll-behavior:auto !important;
+    }
+  }
+
+  /* Subtle scroll-reveal animation */
+  .reveal{
+    opacity:0;
+    transform:translateY(18px);
+    animation:reveal-in 0.7s var(--ease) forwards;
+    animation-play-state:paused;
+  }
+  .reveal.in-view{ animation-play-state:running; }
+  @keyframes reveal-in{
+    to{ opacity:1; transform:none; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity:1; transform:none; animation:none; }
+  }
+</style>
+      <!-- SEO:START (generated by _seo_inject.js) -->
+    <link rel="canonical" href="https://fansist.github.io/mariscos-german/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Mariscos German" />
+    <meta property="og:title" content="Mariscos German: Mexican Seafood in Lincoln Park" />
+    <meta property="og:description" content="Fish tacos, ceviche tostadas, fresh oysters and shrimp cocktails from a Southeast San Diego mariscos favorite." />
+    <meta property="og:url" content="https://fansist.github.io/mariscos-german/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="https://fansist.github.io/mariscos-german/photos/photo1.jpg" />
+    <meta property="og:image:alt" content="The Mariscos German taco truck exterior with hand-painted seafood signage, order window, awning, and menu boards, customers seated at the counter" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mariscos German: Mexican Seafood in Lincoln Park" />
+    <meta name="twitter:description" content="Fish tacos, ceviche tostadas, fresh oysters and shrimp cocktails from a Southeast San Diego mariscos favorite." />
+    <meta name="twitter:image" content="https://fansist.github.io/mariscos-german/photos/photo1.jpg" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"Mariscos German","url":"https://fansist.github.io/mariscos-german/","image":["https://fansist.github.io/mariscos-german/photos/photo1.jpg"],"telephone":"(619) 540-7822","address":{"@type":"PostalAddress","streetAddress":"4724 Federal Blvd","addressLocality":"San Diego","addressRegion":"CA","postalCode":"92102","addressCountry":"US"},"description":"Family-run mariscos operation from San Felipe, Baja California, established in 2000 and credited as the first seafood lonchera (seafood truck) in San Diego. Known for crispy fish and shrimp tacos, marlin tacos, ceviche, clams, oysters, pata de mula, aguachiles, and the complimentary cup of hot se...","areaServed":{"@type":"City","name":"San Diego"}}</script>
+    <!-- SEO:END -->
+  </head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a class="brand" href="#top" aria-label="Mariscos German, home">
+      <svg class="brand-mark" viewBox="0 0 64 64" role="img" aria-hidden="true">
+        <circle cx="32" cy="32" r="31" fill="#0e5153"></circle>
+        <path d="M14 34c6-14 30-14 36 0-6 10-30 10-36 0z" fill="#c4e174"></path>
+        <circle cx="32" cy="33" r="5" fill="#062023"></circle>
+        <path d="M14 34c-4-2-6-6-6-6s5 1 8 3z" fill="#ec6a4c"></path>
+      </svg>
+      <span class="brand-text">Mariscos German<span>San Felipe Style &middot; Est. 2000</span></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+
+    <nav class="main-nav" id="primaryNav" aria-label="Primary">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Menu Highlights</a></li>
+        <li><a href="#menu">Full Menu</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-cta">
+      <a href="tel:+16195407822">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"></path></svg>
+        (619) 540-7822
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="container hero-inner">
+      <span class="hero-eyebrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        Lincoln Park &middot; Southeast San Diego
+      </span>
+      <h1>Mariscos German</h1>
+      <p class="hero-tagline">San Felipe-style Mexican seafood, served from a Federal Blvd lonchera since 2000, credited as San Diego's first seafood truck.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:+16195407822">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"></path></svg>
+          Call (619) 540-7822
+        </a>
+        <a class="btn btn-secondary" href="#visit">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          Get Directions
+        </a>
+      </div>
+      <ul class="hero-meta">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          Open Daily 9am, 7pm
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+          Mariscos (Mexican Seafood) Food Truck
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+          60 Reviews
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="container about-grid">
+      <div class="about-copy reveal">
+        <span class="eyebrow">Our Story</span>
+        <h2>A San Felipe family recipe, served since 2000</h2>
+        <p>Mariscos German is a family-run mariscos operation from San Felipe, Baja California, established in 2000 and credited as the first seafood lonchera (seafood truck) in San Diego. We're known for crispy fish and shrimp tacos, marlin tacos, ceviche, clams, oysters, pata de mula, and aguachiles, plus a complimentary cup of hot seafood consom&eacute; handed to customers while they wait.</p>
+        <p>We're a cult favorite among San Diego taco-truck fans, written up by food blogs like Kirbie's Cravings, and we're proud to still be slinging the same Baja-coast flavors on Federal Blvd today.</p>
+        <div class="about-badges">
+          <span class="badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+            Family-run since 2000
+          </span>
+          <span class="badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+            Credited as SD's first seafood lonchera
+          </span>
+          <span class="badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+            Complimentary seafood consom&eacute;
+          </span>
+        </div>
+      </div>
+      <div class="about-art reveal">
+        <img src="photos/photo4.jpg" alt="Cup of Mariscos German's complimentary hot seafood consom&eacute;, handed to customers while they wait" decoding="async" width="720" height="690">
+        <span class="about-art-tag">On the house, every visit</span>
+        <span class="about-art-badge">Since<br>2000</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services / Menu highlights -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">On The Menu</span>
+        <h2>Baja-coast favorites, made fresh to order</h2>
+        <p class="section-lede">Everything comes straight off the truck window, the same style of mariscos you'd find on the beach in San Felipe.</p>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3 0 5 2 7 6-2 4-4 6-7 6-3.56 0-7.56-2.54-8.5-6z"></path><path d="M6.5 12c-1.5 0-3.5-1-4.5-2m4.5 2c-1.5 0-3.5 1-4.5 2"></path><circle cx="17" cy="10.5" r="0.7" fill="currentColor" stroke="none"></circle></svg>
+          </div>
+          <h3>Fish Tacos (Taco Gobernador)</h3>
+          <p>Crispy fish tacos including the taco gobernador, a Baja-coast classic done right.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M8 10c1-1.5 2.5-2 4-2s3 .5 4 2"></path><path d="M8 14c1 1.5 2.5 2 4 2s3-.5 4-2"></path></svg>
+          </div>
+          <h3>Ceviche &amp; Aguachile Tostadas</h3>
+          <p>Bright, citrus-cured ceviche and spicy aguachile piled high on crunchy tostadas.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c4 3 7 6.5 7 10.5A7 7 0 0 1 5 13.5C5 9.5 8 6 12 3z"></path><path d="M12 8c1.5 1.3 2.5 2.8 2.5 4.5"></path></svg>
+          </div>
+          <h3>Fresh Oysters &amp; Clams (Pata de Mula)</h3>
+          <p>Shucked-to-order oysters and clams, including the beloved pata de mula.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13a8 8 0 0 1 16 0"></path><path d="M4 13h16l-1.5 6h-13z"></path><path d="M9 13v-2M12 13V9M15 13v-2"></path></svg>
+          </div>
+          <h3>Shrimp Cocktails &amp; Mariscos Plates</h3>
+          <p>Hearty shrimp cocktails and mixed mariscos plates loaded with the day's catch.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16"></path><path d="M6 12a6 6 0 0 1 12 0"></path><path d="M4 12v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"></path></svg>
+          </div>
+          <h3>Marlin Tacos &amp; Mar y Tierra Burritos</h3>
+          <p>Smoky marlin tacos and surf-and-turf seafood burritos (mar y tierra).</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15c2-6 14-6 16 0"></path><path d="M12 15v4"></path><path d="M9 19h6"></path></svg>
+          </div>
+          <h3>Complimentary Seafood Consom&eacute;</h3>
+          <p>A hot cup of seafood consom&eacute; is handed to customers while they wait, on the house.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Full Menu -->
+  <section id="menu" class="menu-section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Full Menu</span>
+        <h2>The truck's hand-lettered menu board</h2>
+        <p class="section-lede">Photographed straight off the order window on Federal Blvd. Tap the photo to open it full-size and zoom in.</p>
+      </div>
+
+      <div class="menu-photo-grid">
+        <a class="menu-photo-card reveal" href="photos/menu1.jpg" target="_blank" rel="noopener">
+          <img src="photos/menu1.jpg" alt="Photographed menu board of Mariscos German, panel 1, listing tacos, tacos al gusto, burritos, quesadillas, caldos, cocteles, tostadas, and botanas in Spanish with an English translation panel" decoding="async" width="400" height="389">
+          <span class="menu-zoom-hint">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path><path d="M11 8v6M8 11h6"></path></svg>
+            Tap to zoom
+          </span>
+        </a>
+      </div>
+
+      <p class="menu-note">Menu as photographed on the truck, prices are not shown on the board. Call (619) 540-7822 to confirm current prices and availability.</p>
+
+      <div class="menu-text-grid">
+        <div class="menu-category reveal">
+          <h3>Tacos</h3>
+          <ul class="menu-items">
+            <li>Pescado (fish)</li>
+            <li>Camar&oacute;n (shrimp)</li>
+            <li>Marisicada (mixed seafood)</li>
+            <li>Gobernador</li>
+            <li>Marlin</li>
+            <li>Ahumado con camar&oacute;n (smoked fish with shrimp)</li>
+          </ul>
+        </div>
+
+        <div class="menu-category reveal">
+          <h3>Tacos al Gusto</h3>
+          <ul class="menu-items">
+            <li>7 chiles</li>
+            <li>Al ajo (garlic)</li>
+            <li>A la plancha (grilled)</li>
+            <li>A la diabla (spicy)</li>
+            <li>A la mexicana (with onion, tomato, pepper)</li>
+            <li>Encebollado (with onions)</li>
+          </ul>
+        </div>
+
+        <div class="menu-category reveal">
+          <h3>Burritos</h3>
+          <ul class="menu-items">
+            <li>Pescado (fish)</li>
+            <li>Camar&oacute;n (shrimp)</li>
+            <li>Gobernador</li>
+            <li>Marlin</li>
+            <li>Ahumado con camar&oacute;n (smoked fish with shrimp)</li>
+          </ul>
+        </div>
+
+        <div class="menu-category reveal">
+          <h3>Quesadillas</h3>
+          <ul class="menu-items">
+            <li>Sencillo (plain)</li>
+            <li>Camar&oacute;n (shrimp)</li>
+            <li>Ahumado con camar&oacute;n (smoked fish with shrimp)</li>
+          </ul>
+        </div>
+
+        <div class="menu-category reveal">
+          <h3>Caldos (Soups)</h3>
+          <ul class="menu-items">
+            <li>Consom&eacute; (seafood broth)</li>
+            <li>Pescado (fish soup)</li>
+            <li>7 Mares (seven seas soup)</li>
+          </ul>
+        </div>
+
+        <div class="menu-category reveal">
+          <h3>Cocteles</h3>
+          <ul class="menu-items">
+            <li>Camar&oacute;n (shrimp)</li>
+            <li>Pulpo (octopus)</li>
+            <li>Callo (scallop)</li>
+            <li>Almeja (clam)</li>
+            <li>Choro (mussel)</li>
+            <li>Campechana (mixed seafood)</li>
+            <li>Barbie Special</li>
+          </ul>
+        </div>
+
+        <div class="menu-category reveal">
+          <h3>Tostadas</h3>
+          <ul class="menu-items">
+            <li>Pescado, camar&oacute;n o pulpo (fish, shrimp, or octopus)</li>
+            <li>Aguachile</li>
+            <li>Mixta camar&oacute;n y pulpo (mixed shrimp and octopus)</li>
+            <li>Loca, todo el marisco (all the seafood)</li>
+          </ul>
+        </div>
+
+        <div class="menu-category reveal">
+          <h3>Botanas</h3>
+          <ul class="menu-items">
+            <li>Aguachile</li>
+            <li>Botana mixta (mixed seafood snack)</li>
+            <li>Ostion en su concha (oyster on the half shell)</li>
+            <li>Choro preparado (prepared mussel)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlights strip -->
+  <section id="highlights" class="highlights">
+    <div class="container">
+      <div class="highlights-grid">
+        <div class="highlight-item reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span class="highlight-value">Lincoln Park</span>
+          <span class="highlight-label">Southeast San Diego, on Federal Blvd</span>
+        </div>
+        <div class="highlight-item reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+          <span class="highlight-value">60 Reviews</span>
+          <span class="highlight-label">A cult favorite among San Diego taco-truck fans</span>
+        </div>
+        <div class="highlight-item reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5V6a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v14"></path><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H19"></path></svg>
+          <span class="highlight-value">Since 2000</span>
+          <span class="highlight-label">Credited as San Diego's first seafood lonchera</span>
+        </div>
+        <div class="highlight-item reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V9l8-6 8 6v12"></path><path d="M9 21v-8h6v8"></path></svg>
+          <span class="highlight-value">Featured Truck</span>
+          <span class="highlight-label">Written up by food blogs like Kirbie's Cravings</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">From The Window</span>
+        <h2>A look at the truck and the plates</h2>
+        <p class="section-lede">Real shots from the Federal Blvd truck, the tostadas, the tacos, and the consom&eacute; that keeps people coming back.</p>
+      </div>
+      <div class="gallery-grid">
+        <figure class="gallery-item reveal">
+          <img src="photos/photo2.jpg" alt="Gobernador-style seafood tostada topped with shrimp, raw oysters, red onion, cilantro, and lime" decoding="async" width="720" height="651">
+          <figcaption class="gallery-caption">Gobernador Tostada</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="photos/photo3.jpg" alt="Tostada loca piled with mixed ceviche, shrimp, octopus, and pata de mula clams" decoding="async" width="720" height="668">
+          <figcaption class="gallery-caption">Tostada Loca</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="photos/photo5.jpg" alt="Mar y tierra grilled shrimp taco with charred bell pepper, onion, and tomato" decoding="async" width="720" height="605">
+          <figcaption class="gallery-caption">Mar y Tierra Taco</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <a href="#menu">
+            <img src="photos/photo6.jpg" alt="Close-up of the truck's hand-lettered menu board listing tacos, burritos, cocteles, and tostadas, see the Full Menu section for a zoomable version and text listing" decoding="async" width="400" height="389">
+          </a>
+          <figcaption class="gallery-caption">The Menu Board, see full menu</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Good To Know</span>
+        <h2>Frequently asked questions</h2>
+        <p class="section-lede">A few honest answers before you roll up to the window.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <details>
+            <summary>
+              Do you take cards, or is it cash only?
+              <span class="faq-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>
+              </span>
+            </summary>
+            <div class="faq-answer">
+              <p>Payment options can vary at food trucks and may change day to day. The safest bet is to call ahead at (619) 540-7822 to confirm current payment methods before you head over.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq-item reveal">
+          <details>
+            <summary>
+              Is there seating at the truck?
+              <span class="faq-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>
+              </span>
+            </summary>
+            <div class="faq-answer">
+              <p>As a lonchera-style food truck, seating is typically informal and limited to whatever counter or curbside space is set up trackside on Federal Blvd. It's built for grab-and-go or a quick stand-up bite.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq-item reveal">
+          <details>
+            <summary>
+              How spicy is the food?
+              <span class="faq-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>
+              </span>
+            </summary>
+            <div class="faq-answer">
+              <p>Mariscos-style Mexican seafood ranges from mild ceviche to spicier aguachile and "a la diabla" preparations, so there's a range on the menu. If you're heat-sensitive, ask at the window which items run mild versus spicy.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq-item reveal">
+          <details>
+            <summary>
+              Do you offer catering or large orders?
+              <span class="faq-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>
+              </span>
+            </summary>
+            <div class="faq-answer">
+              <p>For catering, large group orders, or anything outside a typical window order, call (619) 540-7822 directly and ask, they can tell you what's possible.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq-item reveal">
+          <details>
+            <summary>
+              Is the truck always parked in the same spot?
+              <span class="faq-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>
+              </span>
+            </summary>
+            <div class="faq-answer">
+              <p>Mariscos German is based at 4724 Federal Blvd in the Lincoln Park / Southeast San Diego neighborhood. As with any food truck, it's smart to call ahead at (619) 540-7822 if you're making a special trip.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visit -->
+  <section id="visit" class="visit">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Find The Truck</span>
+        <h2>Visit Mariscos German</h2>
+        <p class="section-lede">Roll up on Federal Blvd any day of the week, the window opens at 9am.</p>
+      </div>
+
+      <div class="visit-grid">
+        <div class="visit-card reveal">
+          <ul class="visit-list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <div>
+                <h3>Address</h3>
+                <p>4724 Federal Blvd, San Diego, CA 92102<br>Lincoln Park / Southeast San Diego</p>
+              </div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"></path></svg>
+              <div>
+                <h3>Phone</h3>
+                <p><a href="tel:+16195407822">(619) 540-7822</a></p>
+              </div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg>
+              <div>
+                <h3>Find Us Online</h3>
+                <p>Active listings on Yelp, Yahoo Local, Apple Maps, BBB, and Facebook.</p>
+              </div>
+            </li>
+          </ul>
+
+          <a class="btn btn-primary map-btn" href="https://www.google.com/maps/search/?api=1&query=Mariscos%20German%204724%20Federal%20Blvd%2C%20San%20Diego%2C%20CA%2092102" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Open in Google Maps
+          </a>
+        </div>
+
+        <div class="visit-card reveal">
+          <table class="hours-table">
+            <caption>Hours</caption>
+            <thead>
+              <tr>
+                <th scope="col">Day</th>
+                <th scope="col">Hours</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Monday</th><td>9:00 AM, 7:00 PM</td></tr>
+              <tr><th scope="row">Tuesday</th><td>9:00 AM, 7:00 PM</td></tr>
+              <tr><th scope="row">Wednesday</th><td>9:00 AM, 7:00 PM</td></tr>
+              <tr><th scope="row">Thursday</th><td>9:00 AM, 7:00 PM</td></tr>
+              <tr><th scope="row">Friday</th><td>9:00 AM, 7:00 PM</td></tr>
+              <tr><th scope="row">Saturday</th><td>9:00 AM, 7:00 PM</td></tr>
+              <tr><th scope="row">Sunday</th><td>9:00 AM, 7:00 PM</td></tr>
+            </tbody>
+          </table>
+          <p style="margin-top:16px; color:var(--teal-100); font-size:0.9rem;">Open daily, 9am to 7pm.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+        <circle cx="32" cy="32" r="31" fill="#6cc9bd"></circle>
+        <path d="M14 34c6-14 30-14 36 0-6 10-30 10-36 0z" fill="#eef7d9"></path>
+        <circle cx="32" cy="33" r="5" fill="#062023"></circle>
+      </svg>
+      Mariscos German
+    </div>
+    <nav aria-label="Footer">
+      <ul class="footer-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#visit">Visit</a></li>
+        <li><a href="tel:+16195407822">Call</a></li>
+      </ul>
+    </nav>
+    <p class="footer-note">Mariscos German &middot; 4724 Federal Blvd, San Diego, CA 92102 &middot; Family-run San Felipe-style seafood truck since 2000. This is an independent demo site, not an official page.</p>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    "use strict";
+
+    var toggle = document.getElementById('menuToggle');
+    var nav = document.getElementById('primaryNav');
+    var header = document.getElementById('siteHeader');
+
+    if (toggle && nav) {
+      toggle.addEventListener('click', function(){
+        var isOpen = nav.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+
+      nav.querySelectorAll('a').forEach(function(link){
+        link.addEventListener('click', function(){
+          if (window.matchMedia('(max-width: 759px)').matches) {
+            nav.classList.remove('is-open');
+            toggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+
+      document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+          nav.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.focus();
+        }
+      });
+    }
+
+    if (header) {
+      var onScroll = function(){
+        header.classList.toggle('is-scrolled', window.scrollY > 8);
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    }
+
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!reduceMotion && 'IntersectionObserver' in window) {
+      var revealEls = document.querySelectorAll('.reveal');
+      var observer = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      revealEls.forEach(function(el){ observer.observe(el); });
+    } else {
+      document.querySelectorAll('.reveal').forEach(function(el){
+        el.classList.add('in-view');
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>
